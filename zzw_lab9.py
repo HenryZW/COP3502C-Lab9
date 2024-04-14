@@ -2,6 +2,7 @@
 # Editor: Zachary Allarey
 
 def encoder(password):
+    password = str(password)
     encoded_password = ''
 
     for digit in password:
@@ -10,7 +11,9 @@ def encoder(password):
 
     return encoded_password
 
+
 def decoder(encoded_password):
+    encoded_password = str(encoded_password)
     decoded_password = ''
 
     for digit in encoded_password:
@@ -19,18 +22,16 @@ def decoder(encoded_password):
 
     return decoded_password
 
-def main():
 
+def main():
     while True:
-        encoded_password = 0
-        decoded_password = 0
         print("Menu")
         print("-------------")
         print("1. Encode")
         print("2. Decode")
         print("3. Quit")
 
-        option = input("Please enter an option: ")
+        option = int(input("Please enter an option: "))
 
         match option:
             case 1:
